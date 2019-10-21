@@ -1,0 +1,14 @@
+#navContainer {
+    color: #212529 !important;
+    background-color: #212529 !important;
+    border: unset !important;
+}
+  
+.btn-primary {
+    background-color: #212529 !important;
+    border: unset !important;
+}
+  
+#navContainer :hover {
+    background-color: #007bff !important;
+}

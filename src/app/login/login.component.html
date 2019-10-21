@@ -1,0 +1,56 @@
+<div class="container login-container text-center">
+  <div class="row formContainer">
+    <div class="col-md-6 col-sm-6 col-xs-6">
+      <img src="/assets/images/loginImage.PNG" class="loginImg">
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-6 login-form-1">
+      <h1 class="headingTop">Gateway 360</h1>
+      <h5 class="headingTopChild">Please login to account</h5>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group text-left">
+          <label for="username" class="username">Username or Email ID</label>
+          <input type="text" formControlName="username" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.username.errors }" value="" />
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">username is required</div>
+          </div>
+        </div>
+        <div class="form-group text-left">
+          <label for="password" class="password">Password</label>
+          <input type="password" formControlName="password" class="form-control" value=""
+            [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+        </div>
+        <div class="form-group" class="col-sm-6 col-sm-6 col-xs-6 RememberMe ">
+          <label><input type="checkbox" value=""> Remember me</label>
+        </div>
+        <div class="form-group" class="col-sm-6 col-sm-6 col-xs-6 forgetPwd text-right">
+          <a class="col-sm-6" href="#" class="ForgetPwd">Forget Password?</a>
+        </div>
+        <div class="form-group" class="col-sm-12 col-sm-12 col-xs-12 text-center loginBtnContainer">
+          <button class="btn btn-primary btn-md loginBtn">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-4"></div>
+    <div class="col-md-4 col-sm-4 col-xs-4">
+      <img src="/assets/images/msaLogo.PNG" class="msaLogo">
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+    <div class="col-md-8 col-sm-8 col-xs-8">
+      <footer>
+        <p>Copyright (c) 2019 Management Science Associates, Inc. All rights reserved</p>
+      </footer>
+    </div>
+    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+  </div>
+</div>

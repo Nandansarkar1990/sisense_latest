@@ -1,0 +1,21 @@
+<app-nav></app-nav>
+<div class="container-fluid">
+	<div class="row"></div>
+	<div class="row">
+		<div class="col-3" *ngIf="widgets.length > 0">
+			<h2>My Widgets</h2>
+			<ul class="heroes">
+				<li *ngFor="let widget of widgets" (click)="onSelect(widget)"
+					[class.selected]="widget === selectedWidget" [class.visible]="widget.save">
+					<span class="badge">{{widget.title}}</span>
+				</li>
+			</ul>
+		</div>
+		<div class="col-1 offsetTop">
+			<div *ngIf="widgets.length == 0" class="spinner"></div>
+		</div>
+		<div class="col-8">
+			<app-widget-details [widget]="selectedWidget"> </app-widget-details>
+		</div>
+	</div>
+</div>

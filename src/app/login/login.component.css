@@ -1,0 +1,88 @@
+/* h2 {
+    left: 50%;
+    top: 50%
+}
+form {
+    position : absolute;  
+    width: 50%;
+    left: 30%;
+    top: 30%;
+    padding: 10px;
+    border: 1px solid gray;
+} */
+
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    border-bottom-right-radius: 5px;
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-form-2 h3{
+    text-align: center;
+    color: #fff;
+}
+/* .btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+} */
+/* .login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+} */
+.login-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.headingTopChild {
+    text-align: center;
+    color: #A6A7AD;
+}
+.headingTop {
+    color: #02457B;
+    text-align: center;
+}
+
+.RememberMe, .forgetPwd {
+    display: inline-block;
+}
+.RememberMe {
+    float: left;
+}
+.loginImg {
+    height: 100%;
+    width: 100%;
+    margin-left: 15px;
+}
+.forgetPwd {
+    display: inline-block;
+}
+.loginBtn {
+    background: #02457B !important;
+    border-color: #02457B !important;
+    width: 135px;
+    margin-left: -153px;
+    margin-top: 35px;
+}
+.msaLogo {
+    height: 100%;
+    width: 100%;
+}
+.formContainer {
+    display: inline-flex !important;
+}
+.login-form-1 form{
+    padding-top: 40px;
+}

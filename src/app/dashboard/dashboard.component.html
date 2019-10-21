@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+<h3> My Dashboard </h3>
+<div class="col-sm-2 exportBtns">
+	<app-export></app-export>
+</div>
+<div class="container">
+	<div class="row">
+		<div *ngIf="widgets.length == 0" class="col-sm spinner"></div>
+		<div *ngFor="let widget of widgets" class="col-sm">
+			<div class="card {{widget.size}} myCard">
+				<!--<a class="card-title" routerLink="/widget/{{widget.id}}">{{widget.title}}</a>-->
+				<a class="card-title">{{widget.title}}</a>
+				<div class="card-body">
+					<div id="{{ getContainerId(widget.id) }}" class="sisense-widget"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

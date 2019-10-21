@@ -1,0 +1,63 @@
+
+<div *ngIf="widget">
+	<div class="form-group container">
+		<!--	Editable widget title 	-->
+		<div class="row">
+			<div class="col-2">
+				<label>Title:</label>
+			</div>
+			<div class="col-10">
+				<input [(ngModel)]="widget.title" placeholder="Widget Title">
+			</div>
+		</div>
+
+		<!--	Static Properties 	-->
+		<div class="row">
+			<div class="col-2">
+				<label>ID:</label>
+			</div>
+			<div class="col-10">
+				<span> {{widget.id}} </span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2">
+				<label>Type:</label>
+			</div>
+			<div class="col-10">
+				<span> {{widget.type}} </span>
+			</div>
+		</div>
+
+		<!--	Save widget to the dashboard? 	-->
+		<div class="col btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" 
+			[(ngModel)]="widget.save" (click)="clearContainer();">
+		  <label class="buttonGroupLabel">Visible:</label>
+		  <label ngbButtonLabel class="btn-outline-primary" style="width: 6rem;">
+		    <input ngbButton type="radio" [value]="true"> Yes
+		  </label>
+		  <label ngbButtonLabel class="btn-outline-primary" style="width: 6rem;">
+		    <input ngbButton type="radio" [value]="false"> No
+		  </label>
+		</div>
+
+		<!--	Editable widget size 	-->
+		<div class="col btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="widget.size">
+		  <label class="buttonGroupLabel">Size:</label>
+		  <label ngbButtonLabel class="btn-outline-primary" style="width: 6rem;">
+		    <input ngbButton type="radio" value="short"> Short
+		  </label>
+		  <label ngbButtonLabel class="btn-outline-primary" style="width: 6rem;">
+		    <input ngbButton type="radio" value="standard"> Standard
+		  </label>
+		  <label ngbButtonLabel class="btn-outline-primary" style="width: 6rem;">
+		    <input ngbButton type="radio" value="wide"> Wide
+		  </label>
+		</div>
+
+	</div>
+
+	<!--	Widget Preview 	-->
+	<label class="previewLabel">Preview:</label>
+	<div class="sisense-widget-container" id="{{ getContainerId() }}"></div>
+</div>
